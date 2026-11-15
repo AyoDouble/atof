@@ -148,7 +148,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
 
 .students-section { background: var(--white); }
 .students-heading { margin-bottom: 45px; }
-.student-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.student-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .student-card { overflow: hidden; border: 1px solid #ebe8e1; background: var(--white); }
 .student-art { position: relative; display: flex; min-height: 0; aspect-ratio: 3 / 4; align-items: center; justify-content: center; overflow: hidden; }
 .student-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 38%; }
@@ -158,6 +158,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
 .student-art-one { background: linear-gradient(135deg, #19346d, #6e8d9c); }
 .student-art-two { background: linear-gradient(135deg, #bd8e27, #e1c477); }
 .student-art-three { background: linear-gradient(135deg, #243e56, #839c85); }
+.student-art-four { background: linear-gradient(135deg, #24466a, #9bb9bb); }
 .student-monogram { position: relative; z-index: 1; color: rgba(255,255,255,.88); font-family: var(--serif); font-size: 68px; letter-spacing: -.06em; }
 .student-art-caption { position: absolute; right: 14px; bottom: 14px; z-index: 2; padding: 5px 9px; background: rgba(255,255,255,.94); color: var(--navy); font-size: 9px; font-weight: 700; }
 .student-info { padding: 21px 21px 23px; }
@@ -230,6 +231,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
   .hero-grid { gap: 5%; }
   .hero-art { min-height: 430px; }
   .support-grid { grid-template-columns: repeat(2, 1fr); }
+  .student-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .support-card { min-height: 240px; }
   .join-grid { gap: 6%; }
   .donation-panel { padding-inline: 25px; }
