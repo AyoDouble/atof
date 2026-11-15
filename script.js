@@ -32,7 +32,7 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
 });
 
 const revealElements = document.querySelectorAll(
-  ".hero-copy > *, .hero-art, .story-grid > *, .mission-band > *, .founder-grid > *, .support-heading > *, .support-card, .exam-strip > *, .students-heading > *, .student-card, .gallery-heading > *, .photo-carousel, .join-grid > *, .footer-main > *",
+  ".hero-copy > *, .hero-video, .story-grid > *, .mission-band > *, .founder-grid > *, .support-heading > *, .support-card, .exam-strip > *, .students-heading > *, .student-card, .gallery-heading > *, .photo-carousel, .join-grid > *, .footer-main > *",
 );
 const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
 
