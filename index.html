@@ -25,16 +25,26 @@
           <span class="menu-icon" aria-hidden="true"></span>
         </button>
         <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-          <a href="#about">Our story</a>
-          <a href="#vision">Our Vision</a>
+          <details class="nav-dropdown">
+            <summary>Our Story</summary>
+            <div class="nav-dropdown-menu">
+              <a href="#about">Our Story</a>
+              <a href="#mission">Mission</a>
+              <a href="#vision">Vision</a>
+            </div>
+          </details>
           <a href="#founder">Meet the Founder</a>
-          <a href="#testimonies">Testimonies</a>
-          <a href="#support">What We Do</a>
-          <a href="#students">Student journeys</a>
-          <a href="#gallery">Photo gallery</a>
-          <a href="#donate">Get involved</a>
+          <details class="nav-dropdown">
+            <summary>What We Do</summary>
+            <div class="nav-dropdown-menu">
+              <a href="#support">What We Do</a>
+              <a href="#students">Student Journey</a>
+              <a href="#testimonies">Testimonies</a>
+            </div>
+          </details>
+          <a href="#gallery">Photo Gallery</a>
+          <a class="nav-cta" href="#donate">Support a Student <span aria-hidden="true">↗</span></a>
         </nav>
-        <a class="button button-small header-cta" href="#donate">Support a student <span aria-hidden="true">↗</span></a>
       </div>
     </header>
 
@@ -86,7 +96,7 @@
             <p>Every student deserves the chance to go further. <a class="text-link" href="#support">Help us make it possible. <span aria-hidden="true">→</span></a></p>
           </div>
         </div>
-        <div class="container mission-band" role="group" aria-labelledby="mission-title">
+        <div class="container mission-band" id="mission" role="group" aria-labelledby="mission-title">
           <div class="mission-mark" aria-hidden="true">“</div>
           <div class="mission-content">
             <p class="eyebrow eyebrow-light" id="mission-title">Our Mission</p>
@@ -133,50 +143,6 @@
             <p>But ATOF is still growing, and we cannot do this alone. That is why I am asking you to give generously. Every donation helps us reach more gifted students. Together, we can raise the next generation of leaders without financial constraints standing in their way.</p>
             <p class="founder-closing"><strong>ATOF is where talent finds its way.</strong></p>
             <p class="founder-signature"><em>Amb. Tokunbo Oderinde</em><br><span>Founder, ATOF</span></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="testimonies-section section" id="testimonies" aria-labelledby="testimonies-title">
-        <div class="container">
-          <div class="section-heading testimony-heading">
-            <h2 id="testimonies-title">Testimonies</h2>
-          </div>
-          <div class="testimony-carousel" role="group" aria-roledescription="carousel" aria-label="Testimonies" tabindex="0">
-            <div class="testimony-viewport" id="testimony-viewport">
-              <ul class="testimony-track">
-                <li class="testimony-slide" role="group" aria-roledescription="slide" aria-label="1 of 1">
-                  <figure class="testimony-card">
-                    <span class="testimony-mark" aria-hidden="true">“</span>
-                    <blockquote class="testimony-copy">
-                      <p>Today, l celebrate a distinguished woman whose heart beats with compassion, generosity and an uncommon passion for humanity.</p>
-                      <h3>A WOMAN OF VISION, A BUILDER OF DESTINIES AND LEGECY OF HOPE</h3>
-                      <p>You are more than a philanthropist; you are a destiny helper, a beacon of hope and a builder of future generations.</p>
-                      <p>Your decision to establish this foundation and provide educational scholarships for young people, particularly those aspiring to attain tertiary education, is a noble demonstration of your commitment to human development.</p>
-                      <p>You have chosen not merely to give people fish, but to empower them with the tools to become independent, productive and responsible members of society.</p>
-                      <p>Indeed, education is one of the greatest gifts anyone can give, and by this initiative, you are opening doors of opportunity, restoring hope and creating pathways to brighter futures.</p>
-                      <p>Your impact will not be measured only by the number of scholarships awarded, but by the countless destinies transformed, dreams fulfilled and generations positively influenced.</p>
-                      <p>May the Almighty God replenish your resources, enlarge your coast and grant you the grace to witness the beautiful testimonies that will emerge from this noble vision.</p>
-                      <p><em>ATOF</em> you are not just building a foundation; you are building destinies and securing generations.</p>
-                      <p>Congratulations!</p>
-                      <p>We are proud of you Ambassador, Tokunbo Oderinde!</p>
-                    </blockquote>
-                    <figcaption class="testimony-signature">
-                      <strong>Sola Adeyinka</strong>
-                      <span>Principal, Reagan MBGSS.</span>
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
-            </div>
-            <div class="carousel-footer testimony-footer">
-              <p class="carousel-status testimony-status" aria-live="polite" aria-atomic="true" hidden>1 of 1</p>
-              <div class="carousel-controls testimony-controls" hidden>
-                <button class="carousel-button testimony-previous" type="button" aria-label="Previous testimony" aria-controls="testimony-viewport">←</button>
-                <button class="carousel-button testimony-next" type="button" aria-label="Next testimony" aria-controls="testimony-viewport">→</button>
-              </div>
-              <p class="carousel-hint testimony-hint" hidden>Use the arrow keys to browse testimonies</p>
-            </div>
           </div>
         </div>
       </section>
@@ -275,6 +241,50 @@
             </article>
           </div>
           <p class="student-note">Names and study pathways shown as provided in the foundation's introductory material.</p>
+        </div>
+      </section>
+
+      <section class="testimonies-section section" id="testimonies" aria-labelledby="testimonies-title">
+        <div class="container">
+          <div class="section-heading testimony-heading">
+            <h2 id="testimonies-title">Testimonies</h2>
+          </div>
+          <div class="testimony-carousel" role="group" aria-roledescription="carousel" aria-label="Testimonies" tabindex="0">
+            <div class="testimony-viewport" id="testimony-viewport">
+              <ul class="testimony-track">
+                <li class="testimony-slide" role="group" aria-roledescription="slide" aria-label="1 of 1">
+                  <figure class="testimony-card">
+                    <span class="testimony-mark" aria-hidden="true">“</span>
+                    <blockquote class="testimony-copy">
+                      <p>Today, l celebrate a distinguished woman whose heart beats with compassion, generosity and an uncommon passion for humanity.</p>
+                      <h3>A WOMAN OF VISION, A BUILDER OF DESTINIES AND LEGECY OF HOPE</h3>
+                      <p>You are more than a philanthropist; you are a destiny helper, a beacon of hope and a builder of future generations.</p>
+                      <p>Your decision to establish this foundation and provide educational scholarships for young people, particularly those aspiring to attain tertiary education, is a noble demonstration of your commitment to human development.</p>
+                      <p>You have chosen not merely to give people fish, but to empower them with the tools to become independent, productive and responsible members of society.</p>
+                      <p>Indeed, education is one of the greatest gifts anyone can give, and by this initiative, you are opening doors of opportunity, restoring hope and creating pathways to brighter futures.</p>
+                      <p>Your impact will not be measured only by the number of scholarships awarded, but by the countless destinies transformed, dreams fulfilled and generations positively influenced.</p>
+                      <p>May the Almighty God replenish your resources, enlarge your coast and grant you the grace to witness the beautiful testimonies that will emerge from this noble vision.</p>
+                      <p><em>ATOF</em> you are not just building a foundation; you are building destinies and securing generations.</p>
+                      <p>Congratulations!</p>
+                      <p>We are proud of you Ambassador, Tokunbo Oderinde!</p>
+                    </blockquote>
+                    <figcaption class="testimony-signature">
+                      <strong>Sola Adeyinka</strong>
+                      <span>Principal, Reagan MBGSS.</span>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <div class="carousel-footer testimony-footer">
+              <p class="carousel-status testimony-status" aria-live="polite" aria-atomic="true" hidden>1 of 1</p>
+              <div class="carousel-controls testimony-controls" hidden>
+                <button class="carousel-button testimony-previous" type="button" aria-label="Previous testimony" aria-controls="testimony-viewport">←</button>
+                <button class="carousel-button testimony-next" type="button" aria-label="Next testimony" aria-controls="testimony-viewport">→</button>
+              </div>
+              <p class="carousel-hint testimony-hint" hidden>Use the arrow keys to browse testimonies</p>
+            </div>
+          </div>
         </div>
       </section>
 
