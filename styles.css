@@ -87,6 +87,14 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
 .mission-path { display: flex; align-items: center; gap: 9px; color: #d7d9e7; font-size: 9px; white-space: nowrap; }
 .mission-path i { width: 15px; height: 1px; background: var(--gold); }
 
+.vision-section { background: var(--paper); }
+.vision-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 12%; align-items: start; }
+.vision-grid h2 { max-width: 390px; }
+.vision-content { padding-top: 43px; color: var(--muted); font-size: 13px; }
+.vision-content p { margin-bottom: 18px; }
+.vision-content .vision-lead { color: var(--ink); font-family: var(--serif); font-size: 24px; line-height: 1.5; }
+.vision-content .vision-closing { margin-top: 25px; color: var(--navy); font-family: var(--serif); font-size: 19px; line-height: 1.55; }
+
 .founder-section { background: #f6f4ee; }
 .founder-grid { display: grid; grid-template-columns: minmax(0, .85fr) 1fr; gap: 10%; align-items: center; }
 .founder-portrait { position: relative; min-height: 430px; overflow: hidden; background: #e5e1d7; }
@@ -240,6 +248,9 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
   .mission-mark { font-size: 61px; }
   .mission-statement { font-size: 19px; }
   .mission-path { grid-column: 2; flex-wrap: wrap; }
+  .vision-grid { grid-template-columns: 1fr; gap: 19px; }
+  .vision-content { padding-top: 0; }
+  .vision-content .vision-lead { font-size: 22px; }
   .founder-grid { grid-template-columns: 1fr; gap: 29px; }
   .founder-portrait { min-height: 360px; }
   .founder-portrait img { height: min(112vw, 460px); }
