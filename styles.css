@@ -114,6 +114,13 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
 
 .testimonies-section { background: var(--white); }
 .testimony-heading { margin-bottom: 38px; }
+.testimony-carousel { padding: 18px; border: 1px solid #e6e1d7; background: var(--white); }
+.testimony-carousel [hidden] { display: none; }
+.testimony-viewport { overflow: visible; }
+.testimony-track { display: grid; gap: 20px; margin: 0; padding: 0; list-style: none; }
+.testimony-carousel.is-ready .testimony-viewport { overflow: hidden; }
+.testimony-carousel.is-ready .testimony-track { display: flex; gap: 0; transition: transform .55s cubic-bezier(.2,.7,.25,1); }
+.testimony-slide { min-width: 100%; list-style: none; }
 .testimony-card { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 0 24px; margin: 0; padding: 46px; background: var(--navy); color: var(--white); }
 .testimony-mark { color: var(--gold); font-family: var(--serif); font-size: 82px; line-height: .8; }
 .testimony-copy { min-width: 0; margin: 0; }
@@ -217,6 +224,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
 .donation-footnote { margin: 5px 0 0; color: #86899a; font-size: 9px; line-height: 1.6; }
 
 .site-footer { background: var(--navy-deep); color: #d1d4e0; }
+.footer-brand .brand-logo { width: 76px; height: 90px; object-fit: cover; }
 .footer-main { display: grid; grid-template-columns: 1.2fr 1fr 1fr; align-items: center; gap: 30px; padding-block: 36px; }
 .footer-brand { color: var(--white); }
 .footer-main > p { margin: 0; color: #b8bdcf; font-family: var(--serif); font-size: 15px; line-height: 1.55; }
@@ -239,6 +247,17 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
   .join-grid { gap: 6%; }
   .donation-panel { padding-inline: 25px; }
 }
+@media (max-width: 900px) {
+  .menu-toggle { display: grid; width: 42px; height: 42px; margin-left: auto; place-items: center; border: 1px solid #e7e3db; background: transparent; color: var(--navy); cursor: pointer; }
+  .menu-icon, .menu-icon::before, .menu-icon::after { display: block; width: 17px; height: 1px; background: currentColor; }
+  .menu-icon { position: relative; }
+  .menu-icon::before, .menu-icon::after { position: absolute; left: 0; content: ""; }
+  .menu-icon::before { top: -5px; }
+  .menu-icon::after { top: 5px; }
+  .primary-nav { position: absolute; top: 81px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 15px; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .primary-nav.is-open { display: grid; }
+  .primary-nav a { padding: 12px 0; border-bottom: 1px solid #eeece6; font-size: 12px; }
+}
 @media (max-width: 720px) {
   html { scroll-padding-top: 72px; }
   .container { width: min(100% - 38px, 560px); }
@@ -247,15 +266,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
   .brand-logo { width: 34px; height: 41px; }
   .brand-name { font-size: 12px; }
   .brand-subtitle { font-size: 8px; }
-  .menu-toggle { display: grid; width: 42px; height: 42px; margin-left: auto; place-items: center; border: 1px solid #e7e3db; background: transparent; color: var(--navy); cursor: pointer; }
-  .menu-icon, .menu-icon::before, .menu-icon::after { display: block; width: 17px; height: 1px; background: currentColor; }
-  .menu-icon { position: relative; }
-  .menu-icon::before, .menu-icon::after { position: absolute; left: 0; content: ""; }
-  .menu-icon::before { top: -5px; }
-  .menu-icon::after { top: 5px; }
-  .primary-nav { position: absolute; top: 69px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 15px; border-bottom: 1px solid var(--line); background: var(--paper); }
-  .primary-nav.is-open { display: grid; }
-  .primary-nav a { padding: 12px 0; border-bottom: 1px solid #eeece6; font-size: 12px; }
+  .primary-nav { top: 69px; }
   .hero { padding-top: 53px; }
   .hero-grid { grid-template-columns: 1fr; gap: 37px; }
   .hero-copy { padding: 0; }
@@ -281,6 +292,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
   .founder-portrait { min-height: 360px; }
   .founder-portrait img { height: min(112vw, 460px); }
   .testimony-heading { margin-bottom: 25px; }
+  .testimony-carousel { padding: 10px; }
   .testimony-card { grid-template-columns: 34px minmax(0, 1fr); gap: 0 12px; padding: 27px 20px; }
   .testimony-mark { font-size: 56px; }
   .testimony-copy p { font-size: 12px; }
@@ -315,6 +327,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
   .join-copy > p:not(.eyebrow) { max-width: 480px; }
   .donation-panel { padding: 26px 21px 18px; }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 21px; padding-block: 30px; }
+  .footer-brand .brand-logo { width: 54px; height: 64px; }
   .footer-main > p { text-align: right; font-size: 13px; }
   .footer-contact { grid-column: 1 / -1; justify-items: start; }
 }
@@ -327,6 +340,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 54px); line-height: 1.14; }
   .giving-option { align-items: flex-start; }
   .giving-number { font-size: 16px; }
   .giving-name { max-width: 190px; }
+  .footer-brand .brand-logo { width: 46px; height: 55px; }
   .footer-bottom { gap: 10px; font-size: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {

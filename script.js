@@ -53,6 +53,58 @@ if ("IntersectionObserver" in window && !motionPreference.matches) {
   });
 }
 
+document.querySelectorAll(".testimony-carousel").forEach((carousel) => {
+  const track = carousel.querySelector(".testimony-track");
+  const slides = Array.from(carousel.querySelectorAll(".testimony-slide"));
+  const previousButton = carousel.querySelector(".testimony-previous");
+  const nextButton = carousel.querySelector(".testimony-next");
+  const controls = carousel.querySelector(".testimony-controls");
+  const status = carousel.querySelector(".testimony-status");
+  const hint = carousel.querySelector(".testimony-hint");
+
+  if (!track || !slides.length || !previousButton || !nextButton || !controls || !status || !hint) return;
+
+  let activeIndex = 0;
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${activeIndex * 100}%)`;
+    slides.forEach((slide, slideIndex) => {
+      slide.setAttribute("aria-label", `${slideIndex + 1} of ${slides.length}`);
+      slide.setAttribute("aria-hidden", String(slideIndex !== activeIndex));
+      slide.inert = slideIndex !== activeIndex;
+    });
+    status.textContent = `${activeIndex + 1} of ${slides.length}`;
+  };
+  const hasMultipleSlides = slides.length > 1;
+
+  controls.hidden = !hasMultipleSlides;
+  status.hidden = !hasMultipleSlides;
+  hint.hidden = !hasMultipleSlides;
+  carousel.classList.add("is-ready");
+  showSlide(0);
+
+  if (!hasMultipleSlides) return;
+
+  previousButton.addEventListener("click", () => showSlide(activeIndex - 1));
+  nextButton.addEventListener("click", () => showSlide(activeIndex + 1));
+  carousel.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(activeIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(activeIndex + 1);
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0);
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(slides.length - 1);
+    }
+  });
+});
+
 document.querySelectorAll(".photo-carousel").forEach((carousel) => {
   const track = carousel.querySelector(".carousel-track");
   const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
