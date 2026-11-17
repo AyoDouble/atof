@@ -138,6 +138,12 @@ document.querySelectorAll(".photo-carousel").forEach((carousel) => {
 
   if (!track || !slides.length || !previousButton || !nextButton || !toggleButton || !status) return;
 
+  for (let index = slides.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [slides[index], slides[randomIndex]] = [slides[randomIndex], slides[index]];
+  }
+  track.append(...slides);
+
   let activeIndex = 0;
   let autoplayTimer;
   let userPaused = motionPreference.matches;
