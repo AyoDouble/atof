@@ -25,16 +25,26 @@
           <span class="menu-icon" aria-hidden="true"></span>
         </button>
         <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-          <a href="#about">Our story</a>
-          <a href="#vision">Our Vision</a>
+          <details class="nav-dropdown">
+            <summary>Our Story</summary>
+            <div class="nav-dropdown-menu">
+              <a href="#about">Our Story</a>
+              <a href="#mission">Mission</a>
+              <a href="#vision">Vision</a>
+            </div>
+          </details>
           <a href="#founder">Meet the Founder</a>
-          <a href="#testimonies">Testimonies</a>
-          <a href="#support">What We Do</a>
-          <a href="#students">Student journeys</a>
-          <a href="#gallery">Photo gallery</a>
-          <a href="#donate">Get involved</a>
+          <details class="nav-dropdown">
+            <summary>What We Do</summary>
+            <div class="nav-dropdown-menu">
+              <a href="#support">What We Do</a>
+              <a href="#students">Student Journey</a>
+              <a href="#testimonies">Testimonies</a>
+            </div>
+          </details>
+          <a href="#gallery">Photo Gallery</a>
+          <a class="nav-cta" href="#donate">Support a Student <span aria-hidden="true">↗</span></a>
         </nav>
-        <a class="button button-small header-cta" href="#donate">Support a student <span aria-hidden="true">↗</span></a>
       </div>
     </header>
 
@@ -86,7 +96,7 @@
             <p>Every student deserves the chance to go further. <a class="text-link" href="#support">Help us make it possible. <span aria-hidden="true">→</span></a></p>
           </div>
         </div>
-        <div class="container mission-band" role="group" aria-labelledby="mission-title">
+        <div class="container mission-band" id="mission" role="group" aria-labelledby="mission-title">
           <div class="mission-mark" aria-hidden="true">“</div>
           <div class="mission-content">
             <p class="eyebrow eyebrow-light" id="mission-title">Our Mission</p>
@@ -133,50 +143,6 @@
             <p>But ATOF is still growing, and we cannot do this alone. That is why I am asking you to give generously. Every donation helps us reach more gifted students. Together, we can raise the next generation of leaders without financial constraints standing in their way.</p>
             <p class="founder-closing"><strong>ATOF is where talent finds its way.</strong></p>
             <p class="founder-signature"><em>Amb. Tokunbo Oderinde</em><br><span>Founder, ATOF</span></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="testimonies-section section" id="testimonies" aria-labelledby="testimonies-title">
-        <div class="container">
-          <div class="section-heading testimony-heading">
-            <h2 id="testimonies-title">Testimonies</h2>
-          </div>
-          <div class="testimony-carousel" role="group" aria-roledescription="carousel" aria-label="Testimonies" tabindex="0">
-            <div class="testimony-viewport" id="testimony-viewport">
-              <ul class="testimony-track">
-                <li class="testimony-slide" role="group" aria-roledescription="slide" aria-label="1 of 1">
-                  <figure class="testimony-card">
-                    <span class="testimony-mark" aria-hidden="true">“</span>
-                    <blockquote class="testimony-copy">
-                      <p>Today, l celebrate a distinguished woman whose heart beats with compassion, generosity and an uncommon passion for humanity.</p>
-                      <h3>A WOMAN OF VISION, A BUILDER OF DESTINIES AND LEGECY OF HOPE</h3>
-                      <p>You are more than a philanthropist; you are a destiny helper, a beacon of hope and a builder of future generations.</p>
-                      <p>Your decision to establish this foundation and provide educational scholarships for young people, particularly those aspiring to attain tertiary education, is a noble demonstration of your commitment to human development.</p>
-                      <p>You have chosen not merely to give people fish, but to empower them with the tools to become independent, productive and responsible members of society.</p>
-                      <p>Indeed, education is one of the greatest gifts anyone can give, and by this initiative, you are opening doors of opportunity, restoring hope and creating pathways to brighter futures.</p>
-                      <p>Your impact will not be measured only by the number of scholarships awarded, but by the countless destinies transformed, dreams fulfilled and generations positively influenced.</p>
-                      <p>May the Almighty God replenish your resources, enlarge your coast and grant you the grace to witness the beautiful testimonies that will emerge from this noble vision.</p>
-                      <p><em>ATOF</em> you are not just building a foundation; you are building destinies and securing generations.</p>
-                      <p>Congratulations!</p>
-                      <p>We are proud of you Ambassador, Tokunbo Oderinde!</p>
-                    </blockquote>
-                    <figcaption class="testimony-signature">
-                      <strong>Sola Adeyinka</strong>
-                      <span>Principal, Reagan MBGSS.</span>
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
-            </div>
-            <div class="carousel-footer testimony-footer">
-              <p class="carousel-status testimony-status" aria-live="polite" aria-atomic="true" hidden>1 of 1</p>
-              <div class="carousel-controls testimony-controls" hidden>
-                <button class="carousel-button testimony-previous" type="button" aria-label="Previous testimony" aria-controls="testimony-viewport">←</button>
-                <button class="carousel-button testimony-next" type="button" aria-label="Next testimony" aria-controls="testimony-viewport">→</button>
-              </div>
-              <p class="carousel-hint testimony-hint" hidden>Use the arrow keys to browse testimonies</p>
-            </div>
           </div>
         </div>
       </section>
@@ -278,6 +244,50 @@
         </div>
       </section>
 
+      <section class="testimonies-section section" id="testimonies" aria-labelledby="testimonies-title">
+        <div class="container">
+          <div class="section-heading testimony-heading">
+            <h2 id="testimonies-title">Testimonies</h2>
+          </div>
+          <div class="testimony-carousel" role="group" aria-roledescription="carousel" aria-label="Testimonies" tabindex="0">
+            <div class="testimony-viewport" id="testimony-viewport">
+              <ul class="testimony-track">
+                <li class="testimony-slide" role="group" aria-roledescription="slide" aria-label="1 of 1">
+                  <figure class="testimony-card">
+                    <span class="testimony-mark" aria-hidden="true">“</span>
+                    <blockquote class="testimony-copy">
+                      <p>Today, l celebrate a distinguished woman whose heart beats with compassion, generosity and an uncommon passion for humanity.</p>
+                      <h3>A WOMAN OF VISION, A BUILDER OF DESTINIES AND LEGECY OF HOPE</h3>
+                      <p>You are more than a philanthropist; you are a destiny helper, a beacon of hope and a builder of future generations.</p>
+                      <p>Your decision to establish this foundation and provide educational scholarships for young people, particularly those aspiring to attain tertiary education, is a noble demonstration of your commitment to human development.</p>
+                      <p>You have chosen not merely to give people fish, but to empower them with the tools to become independent, productive and responsible members of society.</p>
+                      <p>Indeed, education is one of the greatest gifts anyone can give, and by this initiative, you are opening doors of opportunity, restoring hope and creating pathways to brighter futures.</p>
+                      <p>Your impact will not be measured only by the number of scholarships awarded, but by the countless destinies transformed, dreams fulfilled and generations positively influenced.</p>
+                      <p>May the Almighty God replenish your resources, enlarge your coast and grant you the grace to witness the beautiful testimonies that will emerge from this noble vision.</p>
+                      <p><em>ATOF</em> you are not just building a foundation; you are building destinies and securing generations.</p>
+                      <p>Congratulations!</p>
+                      <p>We are proud of you Ambassador, Tokunbo Oderinde!</p>
+                    </blockquote>
+                    <figcaption class="testimony-signature">
+                      <strong>Sola Adeyinka</strong>
+                      <span>Principal, Reagan MBGSS.</span>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <div class="carousel-footer testimony-footer">
+              <p class="carousel-status testimony-status" aria-live="polite" aria-atomic="true" hidden>1 of 1</p>
+              <div class="carousel-controls testimony-controls" hidden>
+                <button class="carousel-button testimony-previous" type="button" aria-label="Previous testimony" aria-controls="testimony-viewport">←</button>
+                <button class="carousel-button testimony-next" type="button" aria-label="Next testimony" aria-controls="testimony-viewport">→</button>
+              </div>
+              <p class="carousel-hint testimony-hint" hidden>Use the arrow keys to browse testimonies</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="gallery-section section" id="gallery" aria-labelledby="gallery-title">
         <div class="container">
           <div class="gallery-heading">
@@ -290,52 +300,60 @@
           <div class="photo-carousel" role="group" aria-roledescription="carousel" aria-label="ATOF photo gallery" tabindex="0">
             <div class="carousel-viewport">
               <ul class="carousel-track">
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 14">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9315.jpg" alt="A man in a patterned cap speaks with young people seated around a table"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9324.jpg" alt="Young people gather in a room as a man in a patterned cap speaks on the phone"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9326.jpg" alt="A woman in a purple top speaks into a microphone at a gathering"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9339.jpg" alt="Students and guests gather in a room, with a speaker addressing the group"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9344.jpg" alt="A man in a green jacket holds a microphone as people listen"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="6 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9349.jpg" alt="A large group of students and guests pose together indoors"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="7 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9350.jpg" alt="Young people and adults gather for a group photo"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="8 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9355.jpg" alt="A group of young people and guests share a lively moment together"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="9 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9380.jpg" alt="A man in a green jacket speaks into a microphone while seated guests listen"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="10 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9398.jpg" alt="Two women smile together at a gathering"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="11 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9402.jpg" alt="A young man in a pink shirt speaks into a microphone as others listen"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="12 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9407.jpg" alt="Students and guests pose together for a group photo"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="13 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9412.jpg" alt="Six young people stand together for a photo"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
-                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="14 of 14" aria-hidden="true">
-                  <figure><img class="gallery-photo" src="assets/atof-event-9302.jpg" alt="A man in a patterned cap and young people gather around a table"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure>
-                </li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9195.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9199.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9210.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9222.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9224.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9226.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9228.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9229.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9234.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9236.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9238.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9240.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9243.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9244.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9249.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9252.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9258.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9259.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9266.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9270.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9271.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9272.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9274.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9276.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9279.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9281.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9284.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9286.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9289.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9292.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9298.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9307.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9323.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9326.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9334.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9336.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9339.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9342.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9344.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9348.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9352.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9356.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9358.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9371.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9381.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9390.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9393.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9398.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9406.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
+                <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="ATOF event photo"><figure><img class="gallery-photo" src="assets/gallery/DSC_9412.jpg" alt="Photo from an ATOF event"><figcaption><span class="gallery-index">ATOF Meet and Greet with Conrad Alumni</span></figcaption></figure></li>
               </ul>
             </div>
             <div class="carousel-footer">
-              <p class="carousel-status" aria-live="polite" aria-atomic="true">1 of 14</p>
+              <p class="carousel-status sr-only" aria-live="polite" aria-atomic="true">Photo 1 of 50</p>
               <div class="carousel-controls">
                 <button class="carousel-button carousel-previous" type="button" aria-label="Previous photo">←</button>
                 <button class="carousel-button carousel-toggle" type="button" aria-label="Pause automatic slideshow" aria-pressed="false">Pause</button>

@@ -2,18 +2,41 @@ const menuToggle = document.querySelector(".menu-toggle");
 const primaryNav = document.querySelector("#primary-nav");
 
 if (menuToggle && primaryNav) {
+  const closePrimaryNav = () => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation");
+    primaryNav.classList.remove("is-open");
+    primaryNav.querySelectorAll("details[open]").forEach((dropdown) => {
+      dropdown.open = false;
+    });
+  };
+
   menuToggle.addEventListener("click", () => {
     const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!isExpanded));
-    menuToggle.setAttribute("aria-label", isExpanded ? "Open navigation" : "Close navigation");
-    primaryNav.classList.toggle("is-open", !isExpanded);
+    if (isExpanded) {
+      closePrimaryNav();
+    } else {
+      menuToggle.setAttribute("aria-expanded", "true");
+      menuToggle.setAttribute("aria-label", "Close navigation");
+      primaryNav.classList.add("is-open");
+    }
   });
 
   primaryNav.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Open navigation");
-      primaryNav.classList.remove("is-open");
+    if (event.target instanceof Element && event.target.closest("a")) closePrimaryNav();
+  });
+
+  primaryNav.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const focusedDropdown = event.target instanceof Element
+      ? event.target.closest("details[open]")
+      : null;
+    if (focusedDropdown && primaryNav.contains(focusedDropdown)) {
+      focusedDropdown.open = false;
+      focusedDropdown.querySelector("summary").focus();
+    } else if (menuToggle.getAttribute("aria-expanded") === "true") {
+      closePrimaryNav();
+      menuToggle.focus();
     }
   });
 }
@@ -114,6 +137,12 @@ document.querySelectorAll(".photo-carousel").forEach((carousel) => {
   const status = carousel.querySelector(".carousel-status");
 
   if (!track || !slides.length || !previousButton || !nextButton || !toggleButton || !status) return;
+
+  for (let index = slides.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [slides[index], slides[randomIndex]] = [slides[randomIndex], slides[index]];
+  }
+  track.append(...slides);
 
   let activeIndex = 0;
   let autoplayTimer;
